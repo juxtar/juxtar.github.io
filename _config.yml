@@ -23,8 +23,17 @@ url: "https://juxt.ar" # the base hostname & protocol for your site, e.g. http:/
 github_username:  juxtar
 author:
   name: "Julián Mazzei"
+  github: "https://github.com/juxtar"
 
 paginate: 5
+
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      excerpt_separator:  <!--more-->
+      layout: post
 
 # Build settings
 markdown: kramdown
