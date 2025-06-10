@@ -35,6 +35,43 @@ defaults:
       excerpt_separator:  <!--more-->
       layout: post
 
+prose:
+  rooturl: '_posts'
+  siteurl: 'https://juxt.ar/'
+  media: 'assets/img'
+  ignore:
+    - index.html
+    - /_layouts
+    - /_includes
+    - CNAME
+    - Gemfile
+    - Gemfile.lock
+    - .gitignore
+  metadata:
+    _posts:
+      - name: "layout"
+        field:
+          element: "hidden"
+          value: "post"
+      - name: "categories"
+        field:
+          element: "multiselect"
+          label: "Add Categories"
+          placeholder: "Add Categories"
+          alterable: true
+      - name: "title"
+        field:
+          element: "text"
+          label: "Post title"
+          placeholder: "Title"
+          alterable: true
+      - name: "date"
+        field:
+          element: "text"
+          label: "Date"
+          value: CURRENT_DATETIME
+          alterable: true
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
